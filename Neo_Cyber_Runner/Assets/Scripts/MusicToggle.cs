@@ -10,7 +10,7 @@ public class MusicToggle : MonoBehaviour {
 	
 	void Awake () {
 		musicButtonText.text = PlayerPrefs.GetString("AudioStatus","Turn Music Off");
-		AudioManager.instance.background_music.volume = PlayerPrefs.GetInt("AudioVolume");
+		AudioManager.instance.background_music.volume = PlayerPrefs.GetInt("AudioVolume",1);
 	}
 
 	private void SetText(string text){
